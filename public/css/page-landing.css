@@ -20,7 +20,7 @@
 h1,
 .visit p {
   /*dentro da class pode procurar um elemento especifico
-     (.visit "p" onde ele procura o elemento "p")*/
+     (.visit "<p>" onde ele procura o elemento "<p>")*/
   height: 16vh;
 }
 .visit a {
@@ -51,10 +51,19 @@ h1,
 main h1 {
   animation-delay: 150ms;
   font-size: clamp(4rem, 8vw, 8.4rem);   
-    /* no texto do (h1) está usando a opção "clamp" no font-size para dizer o
+    /* no texto do (<h1>) está usando a opção "clamp" no font-size para dizer o
     tamanho minimo da fonte, o tamanho ideal da fonte, e o tamanho maximo da fonte.
     São usados três valores dentro (min,ideal(view width),max)*/
+    line-height: .88; /*colocando espaçamento no <h1>*/
+ 
+    margin: clamp(10%,9vh,12%) 0 4rem;
+    /* usando o clamp novamente para dizer sobre a margin entre o <h1>,<p> e a logo
+    normalmente uma margin é feita assim (margin:top,lateral,baixo) o valor 4rem
+    é para dá um espaçamento do (<h1> e o <p>)*/
 
+    width: min(300px,80%); 
+    /*está colocando a largura do texto, limitando o texto em 300px ou 30rem,
+    deixando cada parte em baixo da outra por essa limitação */
 }
 .visit p {
   animation-delay: 200ms;
@@ -73,22 +82,20 @@ main h1 {
     display: flex;
     align-items: center;
     justify-content: space-between; /*(space-between) significa colocar espaço. Aqui entre 
-        a logo que está na HEADER e entre o Location. A Opção de justify content, só funciona
+        a logo que está na <HEADER> e entre o .class="Location". A Opção de justify content, só funciona
         se tiver um display:flex ou display:grid*/
   }
   .location,
   h1,
   .visit p {
-    height: initial; /* retorna valor inicial para alinhar com a header acima*/
-    text-align: initial; /*retorna para inicial o h1*/
+    height: initial; /* retorna valor inicial para alinhar com a <header> acima*/
+    text-align: initial; /*retorna para inicial o <h1>*/
   }
   .location {
     text-align: right; /*colocando a localização alinhada a direita */
   }
   h1 {
     font-weight: bold;
-    width: min(300px,80%); 
-    /*está colocando a largura do texto, limitando o texto em 300px ou 30rem,
-    deixando cada parte em baixo da outra por essa limitação */
+    
   }
 }
