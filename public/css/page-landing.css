@@ -1,0 +1,54 @@
+
+#page-landing{
+    background: linear-gradient(329.54deg, #29b6d1 0%, #00c7c7 100%) ;
+    text-align: center;
+    min-height: 100vh; /*(min-height: 100vh; está dizendo para ocupar 100% da tela visivel )*/
+
+   display: flex; /*display da tela, alinhar coisas dentro da tela*/
+   align-items: center;  /*irá alinhar em cima e em baixo colocando no centro tudo da
+                          tags selecionada, que no caso é a #page-landing. */
+}
+#container{
+    margin: auto; /*centraliza tudo, ou seja faz uma margem dos lados, cima e 
+                  baixo se estiver dentro de uma tag que estiver usando display:flex; 
+                  se não ele só alinha as laterais  */
+    width: 90%;
+}
+.location,h1,.visit p {  
+    /*dentro da class pode procurar um elemento especifico
+     (.visit "p" onde ele procura o elemento "p")*/
+    height: 16vh;
+}
+.visit a {  /*Corpo Botão*/
+    width: 8rem;
+    height: 8rem;
+    background: #ffd666;
+
+    border: nome;  /*Opção para tirar bordar atuais*/
+    border-radius: 3rem;  /*acrescentand 3rem de borda*/
+
+    display:flex; /*usando para alinhar a seta e circulo dentro */
+    align-items: center;  /*definindo seta no centro de altura"*/
+    justify-content: center; /*comando usado para centralizar o objeto dentro do circulo*/
+    
+    margin: auto;
+}
+.visit a:hover{   /*Efeito no Botão*/
+    background: #96feff;   /*está função está perguntando se o mouse está em cima dele(hover)*/
+    
+}
+#logo{
+    animation-delay:50ms; /*adicionando delay para cada parte das tags apareça com delay*/
+}
+.location{
+    animation-delay:100ms;
+}
+main h1{
+    animation-delay:150ms;
+}
+.visit p{
+    animation-delay:200ms;
+}
+.visit a {
+    animation-delay:250ms;
+}

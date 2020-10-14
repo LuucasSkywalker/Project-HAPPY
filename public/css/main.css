@@ -1,0 +1,32 @@
+/*o simbolo (*) é um seletor universal, vai pegar todos elementos
+possivel*/
+
+* {
+    margin:0;
+    padding:0;
+}
+body{
+    height: 100vh;  
+    color: white;
+    /* a sigla "vh" significa" view port height" 
+    que preenche toda tele vista se for 100%ou 100vh;*/
+}
+:root {  
+    /*root é um selector que pega o tamanho da fonte do HTML padrao do browser*/
+     /*colocando porcetagem ao invés do (px) fica flexivel o tamanho
+    da fonte para varios dispositivos */
+    font-size:62.5%;
+}
+body, input, button, textarea{
+/*  font-weight:400;
+    font-size: 18px; "tamanho da fonte"
+    line-height: 1;  "espacamento da linha das fontes"
+    font-family: 'Nunito', sans-serif;*/ 
+
+    font: 400 1.8rem/1 'Nunito', sans-serif; 
+
+    /* (1.8'rem' - Pega o tamanho da font pai que é o HTML)ou tamanho "PX" da font do html
+    1rem é 10px, usando 1.8rem trás 18px
+    (1.8'em' - Pega o tamanho da fonte da caixa que ele está dentro, ou irmão)
+    1em é 10px também*/
+}
