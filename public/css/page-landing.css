@@ -8,7 +8,7 @@
                           tags selecionada, que no caso é a #page-landing. */
 }
 #container {
-  margin: auto; 
+  margin: auto;
   /*centraliza tudo, ou seja faz uma margem dos lados, cima e 
   baixo se estiver dentro de uma tag que estiver usando display:flex; 
   se não ele só alinha as laterais  */
@@ -67,26 +67,33 @@ main h1 {
 /* VERSÃO DESKTOP */
 
 @media (min-width: 760px) {
-    /* essa regra só entra se for verdadeira ou falso, no caso
+  /* essa regra só entra se for verdadeira ou falso, no caso
     ela tem que ser verdadeira. Se for maior o tamanho de 760px
     irá execultar o bloco ou as regras de css dentro do bloco */
 
-  #container{ /*IMAGEM DE FUNDO - DENTRO DO CONTAINER*/
-      /* shorthand background: image repeat position / size */
-      background: url("../images/bg.svg") no-repeat 80% / clamp(30rem, 54vw, 56rem);
-      /* Colocando imagem de fundo 'url' (usasse para sair da pasta atual e ir nas
+  #container {
+    /*IMAGEM DE FUNDO - DENTRO DO CONTAINER*/
+    /* shorthand background: image repeat position / size */
+    background: url("../images/bg.svg") no-repeat 80% /
+      clamp(30rem, 54vw, 56rem);
+    /* Colocando imagem de fundo 'url' (usasse para sair da pasta atual e ir nas
       imagens "../" para jogar para cima a pasta. url("../images/e a imagem selecionada")
       após usar, coloque a frente "no-repeat" para não repetir a imagem . 
       O valor a frente (80%) refere-se ao tamanho da imagem. A (/) é usada para setar 
       o ("size" ou 'tamanho') dentro do shorthand do background. Logo após a (/) do size
       usar o clamp() para determinar o tamanho da imagem do background para flexibilidade
       de diferentes telas. IMPORTANTE "não colocar espaço entre 'clamp=>()' usar sem 
-      espaço nos parenteses"*/ 
-  }  
+      espaço nos parenteses"*/
+
+    padding: 5rem 2rem;
+    /*padding é para aumentar o container para preenchimento da imagem se tiver com
+      algum recorte ou algo do gênero, ele expande. (5rem funciona para cima e baixo
+      e 2rem é para as laterais) */
+  }
   header {
     display: flex; /*alinhando o header*/
     align-items: center;
-    justify-content: space-between; 
+    justify-content: space-between;
     /*(space-between) significa colocar espaço. Aqui entre 
     a logo que está na <HEADER> e entre o .class="Location". A Opção de justify content, só funciona
     se tiver um display:flex ou display:grid*/
@@ -115,19 +122,19 @@ main h1 {
     /*está colocando a largura do texto, limitando o texto em 300px ou 30rem,
     deixando cada parte em baixo da outra por essa limitação */
   }
-  .visit {   /*colocando o .visit dentro de um display alinhando com o botão*/
-      display: flex;  /*alinhar com <p> e <a>*/
-      align-items: center;
-      justify-content: space-between; /*colocando <p> e <a> de cada lado*/
+  .visit {
+    /*colocando o .visit dentro de um display alinhando com o botão*/
+    display: flex; /*alinhar com <p> e <a>*/
+    align-items: center;
+    justify-content: space-between; /*colocando <p> e <a> de cada lado*/
   }
   .visit p {
-      font-size: 2.4rem; /*tamanho da fonte da localização*/
-      line-height: 3rem; /*espaçamento entre cidade e estado*/
-      width: clamp(20rem, 20vw, 30rem); 
-      /*colocando clamp para responsividade para cada tela*/
+    font-size: 2.4rem; /*tamanho da fonte da localização*/
+    line-height: 3rem; /*espaçamento entre cidade e estado*/
+    width: clamp(20rem, 20vw, 30rem);
+    /*colocando clamp para responsividade para cada tela*/
   }
   .visit a {
     margin: initial;
-}
- 
+  }
 }
