@@ -27,6 +27,9 @@ aside {
 
 aside h2 {
   /*titulo bara lateral*/
+  animation-delay: 50ms;
+  /*efeito de delay para aparecer cada elemento, foi adicionado o dentro de uma
+  class em cada elemento (<ASIDE>) uma class="animate-up" */
   margin-top: 2.4rem;
   /*margem do item acima*/
 
@@ -35,6 +38,7 @@ aside h2 {
 
 aside p {
   /*paragrafo bara lateral*/
+  animation-delay: 100ms;
   margin-top: 2.4rem;
   /*margem do item acima*/
   font: 400 1.6rem/ 1.5 "Nunito", sans-serif;
@@ -42,8 +46,14 @@ aside p {
 
 aside footer p {
   /*footer rodapé*/
+  animation-delay: 150ms;
   margin-top: 0.8rem;
 }
+
+aside footer strong{
+  animation-delay: 200ms;
+}
+
 
 /*********************************************************/
 /*Botão adicionar*/
