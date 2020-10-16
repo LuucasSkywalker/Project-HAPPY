@@ -7,6 +7,7 @@
   align-items: center; /*irá alinhar em cima e em baixo colocando no centro tudo da
                           tags selecionada, que no caso é a #page-landing. */
 }
+
 #container {
   margin: auto;
   /*centraliza tudo, ou seja faz uma margem dos lados, cima e 
@@ -17,6 +18,7 @@
   ou 112rem que vale 1120, assim haverá uma margem lateral não deixando encostar 
   nas laterais o conteudo em geral mesmo com variaçao do tamanho da tela*/
 }
+
 .location,
 h1,
 .visit p {
@@ -24,8 +26,10 @@ h1,
   (.visit "<p>" onde ele procura o elemento "<p>")*/
   height: 16vh;
 }
+/*****************************************************/
+/*Corpo Botão*/
 .visit a {
-  /*Corpo Botão*/
+  
   width: 8rem;
   height: 8rem;
   background: #ffd666;
@@ -39,16 +43,22 @@ h1,
 
   margin: auto;
 }
+
+/********************************************************/
+  /*Efeito no aparecer conteudo. DELAY nos elementos quando carregar a pagina*/
 .visit a:hover {
-  /*Efeito no Botão*/
-  background: #96feff; /*está função está perguntando se o mouse está em cima dele(hover)*/
+  /*está função está perguntando se o mouse está em cima dele(hover)*/
+  background: #96feff; 
 }
+
 #logo {
   animation-delay: 50ms; /*adicionando delay para cada parte das tags apareça com delay*/
 }
+
 .location {
   animation-delay: 100ms;
 }
+
 main h1 {
   animation-delay: 150ms;
   font-size: clamp(4rem, 8vw, 8.4rem);
@@ -57,12 +67,15 @@ main h1 {
   São usados três valores dentro (min,ideal(view width),max)
   IMPORTANTE "não colocar espaço entre 'clamp=>()' usar sem espaço nos parenteses"*/
 }
+
 .visit p {
   animation-delay: 200ms;
 }
+
 .visit a {
   animation-delay: 250ms;
 }
+
 /**************************************************************/
 /* VERSÃO DESKTOP */
 

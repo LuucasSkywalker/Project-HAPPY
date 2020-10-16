@@ -1,0 +1,50 @@
+#page-orphanages {
+  width: 100%;
+  display: flex;
+}
+
+aside {
+  /*BARRA LATERAL*/
+  width: clamp(24rem, 25vw, 44rem);
+  height: 100%; /*altura da barra lateral*/
+
+  background: linear-gradient(329.54deg, #15b6d6 0%, #15d6d6 100%);
+  /*cor da barra lateral*/
+  padding: 8rem;
+  /*colocando um preenchimento interno de 80px ou 8rem, irá deixar as
+  letras e logo com espaço na lateral do window e em cima*/
+
+  display: flex;
+  flex-direction: column;
+  /*Esse comando (flex-direction: column) irá tirar por padrão o modo que
+  o display flex organiza os itens um do lado do outro e irá colocar como
+  "COLUNA", um em baixo do outro*/
+  justify-content: space-between;
+  /*(space-between) significa colocar espaço, como o flex-direction está
+   como regra "COLUMN- coluna" ele irá dar espaço entre de cima para baixo
+   colocando um item a cima e outro em baixo*/
+}
+
+aside h2 {
+  /*titulo bara lateral*/
+  margin-top: 2.4rem;
+  /*margem do item acima*/
+
+  font: 800 clamp(2rem, 5vw, 3.6rem) / 1.1 "Nunito", sans-serif;
+}
+
+aside p {
+  /*paragrafo bara lateral*/
+  margin-top: 2.4rem;
+  /*margem do item acima*/
+  font: 400 1.6rem/ 1.5 "Nunito", sans-serif;
+}
+
+aside footer p {
+  /*footer rodapé*/
+  margin-top: 0.8rem;
+}
+
+/*********************************************************/
+/*Botão adicionar*/
+
