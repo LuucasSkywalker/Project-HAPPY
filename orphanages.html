@@ -1,48 +1,44 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Localize um Orfanato | Happy</title>
+    <link rel="icon" href="/.public/images/logo-icon.png" />
+    <!--LOGO FAVICON-->
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Localização | Happy</title>
-  <link rel="icon" href="public/images/logo-icon.png" />
-  <!--LOGO FAVICON-->
+    <link rel="stylesheet" href="./public/css/main.css" />
+    <!--parte principal css-->
+    <link rel="stylesheet" href="./public/css/animations.css" />
+    <!--animações css-->
+    <link rel="stylesheet" href="./public/css/page-orphanages.css" />
+    <!--landing pages css-->
 
-  <link rel="stylesheet" href="public/css/main.css" />
-  <!--parte principal css-->
-  <link rel="stylesheet" href="public/css/animations.css" />
-  <!--animações css-->
-  <link rel="stylesheet" href="public/css/page-orphanages.css" />
-  <!--orphanages pages css-->
-
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
-  <!--
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <!--
       link href acima busca a fonte direto no google fonts .
     -->
-</head>
-
-<body>
-  <div id="page-orphanages"></div>
-  <aside>
-    <!--(ASIDE BARRA LATERAL-->
-    <header>
-      <img class="animate-up" src="./public/images/map-marker.svg" alt="Happy">
-    <!--imagem logo happy -->
-      <h2 class="animate-up">Escolha um orfanato no mapa</h2>
-      <p class="animate-up">Muitas crianças estão esperando sua visita :)</p>
-    </header>
-    <footer>
-      <!--Footer Rodapé-->
-      <strong class="animate-up">Caldas Novas</strong>
-      <p class="animate-up">Goiás</p>
-    </footer>
-  </aside>
-  <div class="animate-up" id="mapid">
-    <!--MAPA-->
-    <a href="" class="create-orphanages" title="Cadastre um orfanato" class="animate-up"></a>
-    <img class="animate-up" src="./public/images/plus.svg" alt="Criar Orfanato" >
-    <!--Botão Adicionar-->
-  </div>
-</body>
-
+  </head>
+  <body>
+    <div id="page-orphanages">
+      <aside>
+        <header>
+          <img src="./public/images/map-marker.svg" alt="Happy" />
+          <h2>Escolha um orfanato no mapa</h2>
+          <p>Muitas crianças estão esperando sua visita :)</p>
+        </header>
+        <footer>
+          <strong>Caldas Novas</strong>
+          <p>Goiás</p>
+        </footer>
+      </aside>
+      <div id="mapid"></div>
+      <a href="create-orphanage.html" class="create-orphanage" title="Cadastre um orfanato">
+        <img src="./public/images/plus.svg" alt="Criar Orfanato">
+      </a>
+    </div>
+  </body>
 </html>

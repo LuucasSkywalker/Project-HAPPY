@@ -1,60 +1,78 @@
+/*NOTAS IMPORTANTES DE DESENVOLVIMENTO
+*Clamp(), sempre junto sem espaços
+1.8rem, sempre o rem deve está colado ao Number ou valor referido*/
+
+
 #page-orphanages {
-  width: 100%;
-  display: flex;
-}
+    width: 100%;
+    height: 100%;
 
+    display:flex;
+}
 aside {
-  /*BARRA LATERAL*/
-  width: clamp(24rem, 25vw, 44rem);
-  height: 100%; /*altura da barra lateral*/
+    /*BARRA LATERAL*/
+    width: clamp(24rem, 25vw, 44rem);
+    background: linear-gradient(329.54deg, #15B6D6 0%, #15D6D6 100%);
+    /*cor da barra lateral*/
+    padding: clamp(3rem, 5vw, 8rem);
+    /*colocando um preenchimento interno de 80px ou 8rem, irá deixar as
+    letras e logo com espaço na lateral do window e em cima*/
 
-  background: linear-gradient(329.54deg, #15b6d6 0%, #15d6d6 100%);
-  /*cor da barra lateral*/
-  padding: 8rem;
-  /*colocando um preenchimento interno de 80px ou 8rem, irá deixar as
-  letras e logo com espaço na lateral do window e em cima*/
-
-  display: flex;
-  flex-direction: column;
-  /*Esse comando (flex-direction: column) irá tirar por padrão o modo que
-  o display flex organiza os itens um do lado do outro e irá colocar como
-  "COLUNA", um em baixo do outro*/
-  justify-content: space-between;
-  /*(space-between) significa colocar espaço, como o flex-direction está
-   como regra "COLUMN- coluna" ele irá dar espaço entre de cima para baixo
-   colocando um item a cima e outro em baixo*/
+    display: flex;
+    flex-direction: column;
+    /*Esse comando (flex-direction: column) irá tirar por padrão o modo que
+    o display flex organiza os itens um do lado do outro e irá colocar como
+    "COLUNA", um em baixo do outro*/
+    justify-content: space-between;
+    /*(space-between) significa colocar espaço, como o flex-direction está
+    como regra "COLUMN- coluna" ele irá dar espaço entre de cima para baixo
+    colocando um item a cima e outro em baixo*/
 }
-
 aside h2 {
-  /*titulo bara lateral*/
-  animation-delay: 50ms;
-  /*efeito de delay para aparecer cada elemento, foi adicionado o dentro de uma
-  class em cada elemento (<ASIDE>) uma class="animate-up" */
-  margin-top: 2.4rem;
-  /*margem do item acima*/
+    /*titulo bara lateral*/
+    margin-top: 6.4rem;
+    /*margem do item acima*/
 
-  font: 800 clamp(2rem, 5vw, 3.6rem) / 1.1 "Nunito", sans-serif;
+    font: 800 clamp(2rem, 5vw, 3.6rem)/1.1 'Nunito', sans-serif;
 }
-
 aside p {
-  /*paragrafo bara lateral*/
-  animation-delay: 100ms;
-  margin-top: 2.4rem;
-  /*margem do item acima*/
-  font: 400 1.6rem/ 1.5 "Nunito", sans-serif;
+    /*paragrafo bara lateral*/
+    margin-top: 2.8rem;
+    /*margem do item acima*/
+    font: 400 1.6rem/1.5 'Nunito', sans-serif;
 }
-
 aside footer p {
-  /*footer rodapé*/
-  animation-delay: 150ms;
-  margin-top: 0.8rem;
+    /*footer rodapé*/
+    margin-top: .8rem;
 }
-
-aside footer strong{
-  animation-delay: 200ms;
+#mapid {
+    width: 50%;
 }
+/*BOTÃO ADICIONAR ORFANATO*/
 
+a.create-orphanage {
+    position: absolute;
+    /*Adicionando uma posição absoluta no botão*/
+    right: 4rem;
+    bottom: 4rem;
 
-/*********************************************************/
-/*Botão adicionar*/
+    width: 6.4rem;
+    /*largura do botão*/
+    height: 6.4rem;
+    /*altura do botão*/
+    background: #15C3D6;
+    /*cor do botão*/
+    border: 0;
+    /*borda do botão*/
+    border-radius: 2rem;
+    /*Arredondar borda*/
 
+    display: flex;
+    justify-content: center;
+    /* (Align-Items: center;) definindo objeto no centro de altura"*/
+    align-items: center;
+    /*regra (center) usado para centralizar o objeto dentro do circulo*/
+}
+a.create-orphanage:hover {
+    background: #17D6EB;
+}
