@@ -1,20 +1,36 @@
 /* animações */
 
-@keyframes up {  /*nome da animação no keyframes foi colocada (up), pode ser qualquer nome*/
-    from {       /*from de onde ele vai começar*/
-      opacity: 0;     
-      transform: translateY(16px);  /*ela vai começar de baixo para cima com 16px abaixo*/
-    }
-    to {       /*aonde vai parar*/
-      opacity: 1;
-      transform: translateY(0);     /*vai terminar na posição (0px), posição normal*/
-    }
+@keyframes up {
+  /*nome da animação no keyframes foi colocada (up), pode ser qualquer nome*/
+  from {
+    /*from de onde ele vai começar*/
+    opacity: 0;
+    transform: translateY(16px);
+    /*ela vai começar de baixo para cima com 16px abaixo*/
+  }
+  to {
+    /*aonde vai parar*/
+    opacity: 1;
+    transform: translateY(0);
+    /*vai terminar na posição (0px), posição normal*/
+  }
 }
-.animate-up {                 /*class nomeada de (animate-up)*/
-   animation-name: up;        /*nome da animação é setada o nome do @keyframes "up"*/
-   animation-duration: 300ms;
-   animation-fill-mode: backwards;  /*esse comando vai parar a animação e manter aplicado o efeito*/
+
+@keyframes right {
+  /*animação nomeada de right pois o efeito vem da esquerda
+  e termina na direita */
+  from {
+  }
+  to {
+  }
+}
+.animate-up {
+  /*class nomeada de (animate-up)*/
+  animation-name: up;
+  /*nome da animação é setada o nome do @keyframes "up"*/
+  animation-duration: 300ms;
+  animation-fill-mode: backwards;
+  /*esse comando vai parar a animação e manter aplicado o efeito*/
 }
 
 /*************************************************************/
-
