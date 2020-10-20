@@ -46,7 +46,11 @@ aside footer p {
     margin-top: .8rem;
 }
 #mapid {
-    width: 50%;
+    /*id do map, onde irá aparecer o mapa interativo do leafletjs*/
+    width: 100%;
+    /*colocando para largura preencher 100% do espaço <div ="mapid"*/
+    height: 100%;
+    /*colocando para altura preencher 100% do espaço <div ="mapid"*/
 }
 /*BOTÃO ADICIONAR ORFANATO*/
 
