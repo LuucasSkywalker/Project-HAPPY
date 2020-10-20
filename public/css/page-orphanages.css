@@ -52,9 +52,12 @@ aside footer p {
 
 a.create-orphanage {
     position: absolute;
-    /*Adicionando uma posição absoluta no botão*/
+    /*Adicionando uma posição absoluta no botão ou cria um novo contexto,
+    adiciona fora do projeto, como se não fizesse parte da pagina atual*/
     right: 4rem;
+    /*posicionando o botão a direita*/
     bottom: 4rem;
+    /*posicionando o botão em baixo*/
 
     width: 6.4rem;
     /*largura do botão*/
@@ -72,7 +75,14 @@ a.create-orphanage {
     /* (Align-Items: center;) definindo objeto no centro de altura"*/
     align-items: center;
     /*regra (center) usado para centralizar o objeto dentro do circulo*/
+
+    transition: background-color 200ms;
+    /*Adicionando suavidade na troca de cor (houver) em 200ms de delay
+    para a troca*/
 }
 a.create-orphanage:hover {
+    /*criando um (houver em cima do botão), quando o mouse estiver ou passar
+    em cima dele*/
     background: #17D6EB;
+    /*quando o mouse passar ou para em cima dele o background irá mudar de cor*/
 }
