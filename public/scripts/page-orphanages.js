@@ -28,6 +28,26 @@ const icon = L.icon({
 
 });
 
+//adicionando POPUP sobreposição
+const popup = L.popup({
+    // criado uma const = popup que recebe um objeto {}
+    closeButton: false,
+    //closeButton: não quero que apareça o closeButton, passada por um buleano 'false'
+    className: "map-popup",
+    //className: nome da classe
+    minWidth: 240,
+    //minWidth: Largura mínima
+    minHeight: 240,
+    //minHeight: Altura mínima
+  }).setContent(
+    //o POPUP ira retorna um 'setContent' que é uma função que sera o conteúdo do POPUP
+    'Lar das Meninas <a href="orphanage.html?id=1" class="choose-orphanage"> <img src="./public/images/arrow-white.svg"></a>'
+    /* dentro do conteúdo (setContent) foi adicionado um valor string ('') que irá receber
+    dentro do seu conteúdo um HTML, com uma tag <a> que recebe um conjunto de
+    um link href. A Uma class CSS e um <img src=""> para uma imagem*/
+     
+  );
+
 //Adicionando POPUP de localização dentro do mapa Leaflet
 L.marker([-17.7478233,-48.6266595]).addTo(map)
     .bindPopup('A pretty CSS3 popup.<br> Easily customizable.') //ligar popup
