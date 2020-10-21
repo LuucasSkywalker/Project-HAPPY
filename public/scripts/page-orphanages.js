@@ -14,7 +14,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 //adicionando uma " tilelayer -br(camada)" para o 'map' da const .addTo(map) 
 
 
-//adicionando icone na localização (marker)
+//Criando um icone para ser usado na localização (marker)
 const icon = L.icon({
 // criado uma const = icon que recebe um objeto {}   
   iconUrl: "./public/images/map-marker.svg",
@@ -28,7 +28,7 @@ const icon = L.icon({
 
 });
 
-//adicionando POPUP sobreposição
+//Criando um POPUP para ser usado na localização
 const popup = L.popup({
     // criado uma const = popup que recebe um objeto {}
     closeButton: false,
@@ -44,13 +44,23 @@ const popup = L.popup({
     'Lar das Meninas <a href="orphanage.html?id=1" class="choose-orphanage"> <img src="./public/images/arrow-white.svg"></a>'
     /* dentro do conteúdo (setContent) foi adicionado um valor string ('') que irá receber
     dentro do seu conteúdo um HTML, com uma tag <a> que recebe um conjunto de
-    um link href. A Uma class CSS e um <img src=""> para uma imagem*/
+    um link href. Uma class CSS e um <img src=""> para uma imagem*/
      
   );
 
 //Adicionando POPUP de localização dentro do mapa Leaflet
-L.marker([-17.7478233,-48.6266595]).addTo(map)
-    .bindPopup('A pretty CSS3 popup.<br> Easily customizable.') //ligar popup
-    .openPopup(); //abrir popup
+L.marker([-17.7478233,-48.6266595], {icon}).addTo(map)
+    /* foi criado dentro dos parâmetros onde á um array um outro elemento que é
+    um objeto criado para o icone do marker([-17.7478233,-48.6266595], {icon})
+    que é a imagem e suas propriedades css atribuida nesse objeto {icon} para
+    adicionar ao map .addTo(map) */
+
+    .bindPopup(popup)  //.bindPopup(popup) ligar popup
+    /*foi adicionado ao L.marker pt-(marcador) em cima do mapa de localização o objeto criado
+    a cima const = 'popup' como parâmetro para esse marcador ou marker*/ 
+
+
+    //.bindPopup('A pretty CSS3 popup.<br> Easily customizable.') //ligar popup
+    //.openPopup(); //abrir popup
 /* adicionando um marcador em um parametro pegando elemento de dois valores
-dentro de um array ([-17.7478233,-48.6266595]) e adicionando ão map, .addTo(map)*/ 
+dentro de um array ([-17.7478233,-48.6266595]) e adicionando ao map, .addTo(map)*/ 
