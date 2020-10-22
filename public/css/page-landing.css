@@ -62,7 +62,8 @@ main h1 {
     tags selecionada, que no caso é a .visit a. 
     definindo seta no centro de altura"*/
     justify-content: center; 
-    /*regra (center) usado para centralizar o objeto dentro do circulo*/
+    /*(Justify-Content: space-between) alinha os objetos, o valor 'center'
+    posiciona o objeto no centro*/
   
     margin: auto;
   
@@ -108,6 +109,8 @@ main h1 {
         /*irá alinhar em cima e em baixo colocando no centro tudo da
         tags selecionada, que no caso é a header.*/ 
         justify-content: space-between;
+        /*(Justify-Content: space-between) alinha os objetos, o valor 'spacebetween'
+        posiciona um objeto de cada lado, um do lado esquerdo, outro do lado direito*/
     }
     .location,h1,.visit p {
         height: initial;
@@ -143,7 +146,9 @@ main h1 {
         /*alinhar com <p> e <a>*/
         align-items: center;
         justify-content: space-between;
-        /*colocando <p> e <a> de cada lado*/
+        /*(Justify-Content: space-between) alinha os objetos, o valor 'spacebetween'
+         posiciona um objeto de cada lado, um do lado esquerdo, outro do lado direito 
+        colocando a tag do .visit <p> e <a> de cada lado*/
     }
     .visit p {
        

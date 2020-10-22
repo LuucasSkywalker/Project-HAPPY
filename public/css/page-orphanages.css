@@ -112,6 +112,16 @@ a.create-orphanage:hover {
     color: #0089A5;
     /*cor do texto dentro da caixa popup*/
     font-size: 2rem;
+    /*tamanho da fonte*/
     font-weight:600;
     margin: .8rem 1.2rem;
+    /*margem superior e inferior*/
+
+    display: flex;
+    /*display da tela, alinhar coisas dentro da tela*/
+    align-items: center;
+    /*alinhando objetos ou items, exemplo acima no centro*/
+    justify-content: space-between;
+    /*(Justify-Content: space-between) alinha os objetos, o valor 'spacebetween'
+    posiciona um objeto de cada lado, um do lado esquerdo, outro do lado direito*/
 }
