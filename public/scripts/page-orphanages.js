@@ -32,7 +32,7 @@ const icon = L.icon({
 const popup = L.popup({
     // criado uma const = popup que recebe um objeto {}
     closeButton: false,
-    //closeButton: não quero que apareça o closeButton, passada por um buleano 'false'
+    //closeButton: não quero que apareça o closeButton, passada por um boolean 'false'
     className: "map-popup",
     //className: nome da classe
     minWidth: 240,

@@ -90,3 +90,18 @@ a.create-orphanage:hover {
     background: #17D6EB;
     /*quando o mouse passar ou para em cima dele o background irá mudar de cor*/
 }
+
+/*PARTE POPUP, já tem suas classes escritas dentro da biblioteca*/
+.leaflet-popup-content-wrapper {
+    /*caixa do popup*/
+    background:  rgba(21, 182, 214, 0.8);
+    /*background da caixa popup, definida num objeto css 'rgba ou rgb' que dentro
+    de seus () tem 3 valores referente a cor css e ultimo objeto '0.8' é o alpha
+    ou a opacidade da caixa popup, deixando ela um pouco transparente */
+    box-shadow: 17.2828px 27.65px 41.48px rgba(23.142.166.0.16)
+    /*Sombreamento da caixa do popup, definida por 3 valores em (PIXEL-px) que
+    são '17.2828px deslocamento do eixo X, ou lateral. Jogando a sombra pro lado'
+    o valor 2 '27.65px deslocamento Y ou vertical, jogando a sombra ou para baixo 
+    ou para cima da caixa popup' e o 3 valor (41.48px é o blur, ou efeito fumaçado
+     da sombra). Após adicionando a cor da sombra que está usando um objeto rgba*/
+}
