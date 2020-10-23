@@ -125,7 +125,7 @@ a.create-orphanage:hover {
     /*conteúdo dentro do popup(TEXTO E BOTÃO*/
     color: #0089A5;
     /*cor do texto dentro da caixa popup*/
-    font: 600 2rem/1 'Nunito', sans-serif;
+    font: 700 2rem/1 'Nunito', sans-serif;
     /*(2rem/1) que significa tamanho de 2rem ou tamanho da fonte , e a (/) barra é 
     o espaçamento entre as linhas de um texto ou line-height. Por último e o estilo
     da fonte*/
