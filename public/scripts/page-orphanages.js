@@ -1,3 +1,5 @@
+/*----------------------PARTE JAVASCRIPT MAP LEAFLET---------------------*/ 
+
 //Adicionando Zoom e estrutura leaflet
 const map = L.map('mapid').setView([-17.7478233,-48.6266595], 14);
 /*mapa do leaflet armazenada em uma constante 'const= map' e ligada a <div id="mapid"> no HTML.

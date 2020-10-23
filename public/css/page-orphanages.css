@@ -19,14 +19,18 @@ aside {
     letras e logo com espaço na lateral do window e em cima*/
 
     display: flex;
+    /*(display:flex) usando para alinhar e organizar os elementos de uma
+    página HTML dentro de seus containers de forma dinâmica */
     flex-direction: column;
     /*Esse comando (flex-direction: column) irá tirar por padrão o modo que
     o display flex organiza os itens um do lado do outro e irá colocar como
     "COLUNA", um em baixo do outro*/
     justify-content: space-between;
-    /*(space-between) significa colocar espaço, como o flex-direction está
-    como regra "COLUMN- coluna" ele irá dar espaço entre de cima para baixo
-    colocando um item a cima e outro em baixo*/
+    /*(Justify-Content: space-between) alinha os objetos, o valor 'spacebetween'
+    posiciona um objeto de cada lado, com o flex-direction acima, o valor 
+    "COLUMN- coluna" ele irá dar espaço para cima e outro para baixo colocando
+    um item a cima e outro em baixo, ao invés de colocar um de lado e jogando 
+    o outro para lado oposto*/
 }
 aside h2 {
     /*titulo bara lateral*/
@@ -52,6 +56,8 @@ aside footer p {
     height: 100%;
     /*colocando para altura preencher 100% do espaço <div ="mapid"*/
 }
+/*-----------------------------------------------------------------------------------*/
+
 /*BOTÃO ADICIONAR ORFANATO*/
 
 a.create-orphanage {
@@ -75,53 +81,109 @@ a.create-orphanage {
     /*Arredondar borda*/
 
     display: flex;
-    justify-content: center;
-    /* (Align-Items: center;) definindo objeto no centro de altura"*/
+    /*(display:flex) usando para alinhar e organizar os elementos de uma
+    página HTML dentro de seus containers de forma dinâmica */
     align-items: center;
-    /*regra (center) usado para centralizar o objeto dentro do circulo*/
+    /* (Align-Items: center;) alinhando objetos ou items no centro. Nesse
+    valor (center) usando nesse caso para centralizar o objeto dentro do circulo*/
+    justify-content: center;
+    /*(Justify-Content: center) alinha os objetos, o valor 'center'
+    posiciona o objeto no centro*/
 
-    transition: background-color 200ms;
-    /*Adicionando suavidade na troca de cor (houver) em 200ms de delay
-    para a troca*/
 }
 a.create-orphanage:hover {
-    /*criando um (houver em cima do botão), quando o mouse estiver ou passar
+    /*criando um (hover em cima do botão), quando o mouse estiver ou passar
     em cima dele*/
+    transition: background-color 200ms;
+    /*(transition: background-color 200ms) diz que haverá uma transição de cor
+    de fundo em 2 segundos, ou 200ms gerando suavidade na transição*/
     background: #17D6EB;
     /*quando o mouse passar ou para em cima dele o background irá mudar de cor*/
 }
+/*-----------------------------------------------------------------------------------*/
 
-/*PARTE POPUP, já tem suas classes escritas dentro da biblioteca*/
+/*PARTE POPUP, já tem suas classes escritas dentro da biblioteca Leaflet MAP*/
+
 .leaflet-popup-content-wrapper {
     /*caixa do popup*/
     background:  rgba(255, 255, 255, 0.8);
     /*background da caixa popup, definida num objeto css 'rgba ou rgb' que dentro
     de seus () tem 3 valores referente a cor css e ultimo objeto '0.8' é o alpha
     ou a opacidade da caixa popup, deixando ela um pouco transparente */
+
     box-shadow: 17.2828px 27.65px 41.48px rgba(23.142.166.0.16);
     /*Sombreamento da caixa do popup, definida por 3 valores em (PIXEL-px) que
     são '17.2828px deslocamento do eixo X, ou lateral. Jogando a sombra pro lado'
     o valor 2 '27.65px deslocamento Y ou vertical, jogando a sombra ou para baixo 
     ou para cima da caixa popup' e o 3 valor (41.48px é o blur, ou efeito fumaçado
     da sombra). Após adicionando a cor da sombra que está usando um objeto rgba*/
+    
     border-radius: 10px;
-    /*adicionando arrendamento nas bordas da caixa popup */
+    /*adicionando bordas redondas na caixa do popup */
 }
 .leaflet-popup-content {
     /*conteúdo dentro do popup(TEXTO E BOTÃO*/
     color: #0089A5;
     /*cor do texto dentro da caixa popup*/
-    font-size: 2rem;
-    /*tamanho da fonte*/
-    font-weight:600;
+    font: 600 2rem/1 'Nunito', sans-serif;
+    /*(2rem/1) que significa tamanho de 2rem ou tamanho da fonte , e a (/) barra é 
+    o espaçamento entre as linhas de um texto ou line-height. Por último e o estilo
+    da fonte*/
     margin: .8rem 1.2rem;
     /*margem superior e inferior*/
 
     display: flex;
-    /*display da tela, alinhar coisas dentro da tela*/
+    /*(display:flex) usando para alinhar e organizar os elementos de uma
+    página HTML dentro de seus containers de forma dinâmica */
     align-items: center;
-    /*alinhando objetos ou items, exemplo acima no centro*/
+    /* (Align-Items: center;) alinhando objetos ou items no centro do conteúdo
+    dentro da caixa do popup que são o texto e o botão*/
     justify-content: space-between;
     /*(Justify-Content: space-between) alinha os objetos, o valor 'spacebetween'
-    posiciona um objeto de cada lado, um do lado esquerdo, outro do lado direito*/
+    posiciona um objeto de cada lado, um do lado esquerdo, outro do lado direito
+    e nesse bloco, irá colocar o texto e o botão um de cada lado*/
+}
+.leaflet-popup-content a {
+    /*conteúdo do botão caixa popup*/
+    width: 4rem;
+    /*largura botão*/
+    height: 4rem;
+    /*altura botão*/
+    background: #15C3D6;
+    /*cor fundo caixa botão*/
+    box-shadow: 17.2828px 27.65px 41.48px rgba(23.142.166.0.16);
+    /*Sombreamento da caixa do popup, definida por 3 valores em (PIXEL-px) que
+    são '17.2828px deslocamento do eixo X, ou lateral. Jogando a sombra pro lado'
+    o valor 2 '27.65px deslocamento Y ou vertical, jogando a sombra ou para baixo 
+    ou para cima da caixa popup' e o 3 valor (41.48px é o blur, ou efeito fumaçado
+    da sombra). Após adicionando a cor da sombra que está usando um objeto rgba*/
+    border-radius: 12px;
+    /*adicionado bordas redondas na caixa do botão*/
+
+    display: flex;
+    /*(display:flex) usando para alinhar e organizar os elementos de uma
+    página HTML dentro de seus containers de forma dinâmica */
+    align-items: center;
+    /* (Align-Items: center;) alinhando objetos ou items no centro do conteúdo
+    dentro do caixa do botão*/
+    justify-content: center;
+    /*(Justify-Content: center) alinha os objetos, o valor 'center'
+    posiciona um objeto no centro, nesse bloco, irá colocar a seta do 
+    botão centralizada*/
+    
+}
+.leaflet-popup-content a:hover {
+    /*criando um (hover em cima do botão), quando o mouse estiver ou passar
+    em cima dele altera a cor de fundo*/
+    transition: background-color 200ms;
+    /*(transition: background-color 200ms) diz que haverá uma transição de cor
+    de fundo em 2 segundos, ou 200ms gerando suavidade na transição*/
+    background: #17D6EB;
+    /*cor de fundo hover*/
+}
+.leaflet-popup-tip {
+    /*tirando a seta na caixa do popup que mostra para baixo*/
+    display: none;
+    /*(display:nome) irá retirar elemento selecionado, ou dizendo que 
+    não tem elemento, ou sem */
 }
