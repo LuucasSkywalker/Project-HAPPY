@@ -55,6 +55,10 @@ aside footer p {
     /*colocando para largura preencher 100% do espaço <div ="mapid"*/
     height: 100%;
     /*colocando para altura preencher 100% do espaço <div ="mapid"*/
+
+    animation-delay: 200ms;
+    /*animação com delay de 2segundos criada na animations.css com nome de 
+    @keyframes apper e nomeada a classe de animate-apper*/
 }
 /*-----------------------------------------------------------------------------------*/
 
