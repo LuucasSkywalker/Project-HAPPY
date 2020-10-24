@@ -68,6 +68,16 @@ a.create-orphanage {
     /*posicionando o botão a direita*/
     bottom: 4rem;
     /*posicionando o botão em baixo*/
+    z-index: 10;
+    /*(z-index: 10); é RESPONSÁVEL POR JOGAR CAMADAS ACIMA DE UMA PAGINA, pode
+    ser um BOTÃO igual ele está execultando no botão de adicionar orfanato que
+    não aparece pois está debaixo da camada que mostra o mapa, então criar-se 
+    um "z-index: 10" para jogar ele acima de qualquer pagina. Se o valor (10) 
+    não for suficiente adiciona um "z-index:" também na parte do container do 
+    objeto que está sobre ele, que no caso aqui é o map leaflet. Então dentro
+    do container .leaflet-container { adicione um "z-index:5; } para deixa ele
+    5 posições acima, e o botão como tá "z-index: 10;" irá ficar superior ao mapa
+    por está 10 posições acima ." . */
 
     width: 6.4rem;
     /*largura do botão*/
@@ -186,4 +196,11 @@ a.create-orphanage:hover {
     display: none;
     /*(display:nome) irá retirar elemento selecionado, ou dizendo que 
     não tem elemento, ou sem */
+}
+.leaflet-container {
+    /*container do LEAFLET, ou corpo principal do mapa*/
+    z-index: 5;
+    /*jogando o (z-index: 5) cinco posições acima da pagina atual, sendo que 
+    no a.create-orphanage que é o botão de adicionar orfanato está com z-index: 10
+    então o botão ficará acima do mapa */
 }
