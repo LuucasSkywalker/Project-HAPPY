@@ -1,0 +1,76 @@
+#page-orphanage {
+    display: flex;
+    /*(display:flex) usando para alinhar e organizar os elementos de uma
+    página HTML dentro de seus containers de forma dinâmica, deixando uma caixa
+    do lado da outra */
+    min-height: 100vh;
+    /*(min-height: 100vh; está dizendo para ocupar 100% da tela visivel )*/
+}
+
+aside.sidebar {
+     /*(aside) uma coluna em um site, ou uma barra lateral, (sidebar) é a 
+    coluna lateral a direita do site, ou a esquerda podendo usar os dois 
+    para personalização no css, no HTML só existe a tag <aside>*/
+    position: fixed;
+    /*(position: fixed) deixa a parte lateral fixa, não rola no scroll nem
+     movimenta*/
+    height: 100%;
+     /*colocando para altura preencher 100% do espaço*/
+    padding: 3.2rem 2.4rem; 
+    /*As propriedades de preenchimento padding CSS são usadas para gerar espaço ao 
+    redor do conteúdo de um elemento, dentro de quaisquer bordas definidas. 
+    (3.2rem funciona para cima e baixo e 2.4rem é para as laterais) */
+    background: #15C3D6;
+    /*cor de fundo da barra lateral <aside> ou na classe.sidebar*/
+    display: flex;
+    /*(display:flex) usando para alinhar e organizar os elementos de uma
+    página HTML dentro de seus containers de forma dinâmica, deixando uma caixa
+    do lado da outra */
+    flex-direction: column;
+    /*Esse comando (flex-direction: column) irá tirar por padrão o modo que
+    o display flex organiza os itens um do lado do outro e irá colocar como
+    "COLUNA", um em baixo do outro*/
+    justify-content: space-between;
+    /*(Justify-Content: space-between) alinha os objetos, o valor 'spacebetween'
+    posiciona um objeto de cada lado, com o flex-direction acima, o valor 
+    "COLUMN- coluna" ele irá dar espaço para cima e outro para baixo colocando
+    um item a cima e outro em baixo, ao invés de colocar um de lado e jogando 
+    o outro para lado oposto*/
+    align-items: center;
+    /* (Align-Items: center;) alinhando objetos ou items no centro do conteúdo
+    nesse caso dentro da barra lateral sidebar*/
+
+}
+aside.sidebar footer button {
+    /*PARTE DO BOTÃO DENTRO DO SIDEBAR*/
+    width: 48px;
+    /*largura do botão*/
+    height: 48px;
+    /*altura do botão*/
+    border: none;
+    /*Opção para tirar bordar atuais*/
+    background: #12AFCB;
+    /*cor de fundo botão*/
+    border-radius: 1.6rem;
+    /*adicionando bordas redondas na caixa botão */
+    cursor: pointer;
+    /*uma animação do cursor do mouse, ou a setinha do mouse quando para em cima
+    ele se torna uma mãozinha ao invés da setinha padrão*/
+    display: flex;
+    /*(display:flex) usando para alinhar e organizar os elementos de uma
+    página HTML dentro de seus containers de forma dinâmica, deixando uma caixa
+    do lado da outra */
+    align-items: center;
+    /* (Align-Items: center;) alinhando objetos ou items no centro do conteúdo
+    nesse caso a setinha dentro do botão*/
+    justify-content: center;
+    /*(Justify-Content: center) alinha os objetos, o valor 'center'
+    posiciona o objeto no centro*/
+
+}
+.with-sidebar {
+    /*criando uma class para dar espaçamento das imagens da barra lateral <aside-sidebar>
+    da esquerda, chegando elas para direita. Foi criada a classe dentro do <main>*/
+    padding-left: 110px;
+    /*colocando um espaço da esquerda de 100px*/
+}

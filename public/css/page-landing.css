@@ -93,9 +93,9 @@ main h1 {
      /* shorthand background: image repeat position / size */
 
         padding: 5rem 2rem;
-        /*padding é para aumentar o container para preenchimento da imagem se tiver com
-      algum recorte ou algo do gênero, ele expande. (5rem funciona para cima e baixo
-      e 2rem é para as laterais) */
+        /*As propriedades de preenchimento padding CSS são usadas para gerar espaço ao 
+        redor do conteúdo de um elemento, dentro de quaisquer bordas definidas.
+        (5rem funciona para cima e baixo e 2rem é para as laterais)*/
 
         background: url("../images/bg.svg") no-repeat 80% / clamp(30rem, 54vw, 56rem);
         /* Colocando imagem de fundo 'url' (usasse para sair da pasta atual e ir nas

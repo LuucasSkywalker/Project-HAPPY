@@ -8,9 +8,12 @@ possivel*/
 }
 body{
     height: 100vh;  
-    color: white;
     /* a sigla "vh" significa" view port height" 
     que preenche toda tele vista se for 100%ou 100vh;*/
+    color: white;
+    background: #ebf2f5;
+    /*colocando cor de fundo*/
+    
 }
 :root {  
     /*root é um selector que pega o tamanho da fonte do HTML padrao do browser*/

@@ -8,6 +8,9 @@
     height: 100%;
 
     display:flex;
+    /*(display:flex) usando para alinhar e organizar os elementos de uma
+    página HTML dentro de seus containers de forma dinâmica, deixando uma caixa
+    do lado da outra */
 }
 aside {
     /*BARRA LATERAL*/
@@ -20,7 +23,8 @@ aside {
 
     display: flex;
     /*(display:flex) usando para alinhar e organizar os elementos de uma
-    página HTML dentro de seus containers de forma dinâmica */
+    página HTML dentro de seus containers de forma dinâmica, deixando uma caixa
+    do lado da outra */
     flex-direction: column;
     /*Esse comando (flex-direction: column) irá tirar por padrão o modo que
     o display flex organiza os itens um do lado do outro e irá colocar como
@@ -96,7 +100,8 @@ a.create-orphanage {
 
     display: flex;
     /*(display:flex) usando para alinhar e organizar os elementos de uma
-    página HTML dentro de seus containers de forma dinâmica */
+    página HTML dentro de seus containers de forma dinâmica, deixando uma caixa
+    do lado da outra */
     align-items: center;
     /* (Align-Items: center;) alinhando objetos ou items no centro. Nesse
     valor (center) usando nesse caso para centralizar o objeto dentro do circulo*/
@@ -148,7 +153,8 @@ a.create-orphanage:hover {
 
     display: flex;
     /*(display:flex) usando para alinhar e organizar os elementos de uma
-    página HTML dentro de seus containers de forma dinâmica */
+    página HTML dentro de seus containers de forma dinâmica, deixando uma caixa
+    do lado da outra */
     align-items: center;
     /* (Align-Items: center;) alinhando objetos ou items no centro do conteúdo
     dentro da caixa do popup que são o texto e o botão*/
@@ -176,7 +182,8 @@ a.create-orphanage:hover {
 
     display: flex;
     /*(display:flex) usando para alinhar e organizar os elementos de uma
-    página HTML dentro de seus containers de forma dinâmica */
+    página HTML dentro de seus containers de forma dinâmica, deixando uma caixa
+    do lado da outra */
     align-items: center;
     /* (Align-Items: center;) alinhando objetos ou items no centro do conteúdo
     dentro do caixa do botão*/
@@ -198,8 +205,9 @@ a.create-orphanage:hover {
 .leaflet-popup-tip {
     /*tirando a seta na caixa do popup que mostra para baixo*/
     display: none;
-    /*(display:nome) irá retirar elemento selecionado, ou dizendo que 
-    não tem elemento, ou sem */
+    /*(display:flex) usando para alinhar e organizar os elementos de uma
+    página HTML dentro de seus containers de forma dinâmica, deixando uma caixa
+    do lado da outra */
 }
 .leaflet-container {
     /*container do LEAFLET, ou corpo principal do mapa*/

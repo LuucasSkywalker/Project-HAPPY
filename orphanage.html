@@ -41,8 +41,19 @@
 
   <body>
     <div id="page-orphanage">
-      <aside class="animate-right"></aside>
-      <main>
+      <aside class="animate-right sidebar">
+
+        <img src="./public/images/map-marker.svg" alt="Happy">
+        
+        <footer>
+          <button onclick="history.back()"> <!--execultando um função js onclick="history.back()"
+          que sabe seu historico de navegação, e utilizando o .back() ele volta uma pagina anterior-->
+            <img src="./public/images/arrow-back.svg" alt="voltar">
+          </button>
+        </footer>
+      </aside>
+
+      <main class="animate-apper with-sidebar">
         <div class="orphanage-details">
           <img src="./public/images/home.jpg" alt="Lar das Meninas" />
 
