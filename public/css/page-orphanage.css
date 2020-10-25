@@ -41,8 +41,12 @@ aside.sidebar {
     nesse caso dentro da barra lateral sidebar*/
 
 }
+/*-----------------------------------------------------------------------------------*/
+
+/*PARTE DO BOTÃO VOLTAR <- DENTRO DO SIDEBAR */
+
 aside.sidebar footer button {
-    /*PARTE DO BOTÃO DENTRO DO SIDEBAR*/
+    
     width: 48px;
     /*largura do botão*/
     height: 48px;
@@ -66,11 +70,27 @@ aside.sidebar footer button {
     justify-content: center;
     /*(Justify-Content: center) alinha os objetos, o valor 'center'
     posiciona o objeto no centro*/
-
 }
+
+aside.sidebar footer button:hover {
+    /*criando um (hover em cima do botão), quando o mouse estiver ou passar
+    em cima dele*/
+    transition: background-color 200ms;
+    /*(transition: background-color 200ms) diz que haverá uma transição de cor
+    de fundo em 2 segundos, ou 200ms gerando suavidade na transição*/
+    background: #17d6eb;
+    /*quando o mouse passar ou para em cima dele o background irá mudar de cor*/
+}
+
 .with-sidebar {
     /*criando uma class para dar espaçamento das imagens da barra lateral <aside-sidebar>
     da esquerda, chegando elas para direita. Foi criada a classe dentro do <main>*/
     padding-left: 110px;
     /*colocando um espaço da esquerda de 100px*/
 }
+
+/*-----------------------------------------------------------------------------------*/
+
+/*PARTE DO DETALHES, IMAGENS, MAP, CONTATO, WHATSAPP NO CENTRO DO CORPO DA PAGINA,
+ OU <MAIN>*/
+
