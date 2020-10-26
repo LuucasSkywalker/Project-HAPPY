@@ -91,6 +91,79 @@ aside.sidebar footer button:hover {
 
 /*-----------------------------------------------------------------------------------*/
 
-/*PARTE DO DETALHES, IMAGENS, MAP, CONTATO, WHATSAPP NO CENTRO DO CORPO DA PAGINA,
+/*PARTE DO DETALHES, IMAGENS, BOTÃO, MAP, CONTATO, WHATSAPP NO CENTRO DO CORPO DA PAGINA,
  OU <MAIN>*/
 
+.orphanage-details {
+    /*CORPO DA PAGINA*/
+    width: 70rem;
+    /*colocando largura maxima de 70rem no corpo do <main> ou da class orphanage-details */
+    margin: 6.4rem auto;
+    /*colocando uma margina de altura, ou topo de 6.4rem e nas laterais deixando auto*/
+    background: #fdfbfb;
+    /*cor de fundo*/
+    border: 1px solid #d3e2e5 ;
+    /*adicionando uma borda em torno do conteúdo <div class="orphanage-details">
+    com 3 vaores border: largura de 1px, solida e cor  */
+    border-radius: 2rem;
+    /*adicionando bordas redondas na pagina details */
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*PARTE DAS PROPRIEDADES DAS IMAGENS E PERSONALIZAÇÃO DELAS */
+.orphanage-details > img {
+    /*PRIMEIRA IMAGEM DENTRO DA PAGINA, se colocar só img irá pegar todas as imagens
+    dentro do details, como quero pegar só a primeira imagem que está em primeiro nivél
+    usasse ('>') para dizer que quer a primeira imagem do primeiro nivél*/
+    width: 100%;
+    /*colocando a largura da img de primeiro nivél em 100% do espaço da tela dentro do
+    limite declarado em orphanage.details, que é de 70rem, ou 700pixel*/
+    height: 30rem;
+    /*altura da imagem*/
+    object-fit: cover;
+    /*(obejct-fit) é usada para ajustar a imagem na tela, ou na sua proporção, existe
+    varias propriedades para ajustar, a opção :contain irá conter imagem no seu tamanho original
+    sem distorção, a opção :cover irá ajustar a imagem, dano um zoom sem ter distoção para 
+    adeguar ao tamanho selecionado na img. */
+}
+
+.images {
+    /*------------UTILIZANDO O GRID--------------*/
+    /*SLIDE DE IMAGES, a class="images" contem 6 imagens e 6 butão dentro dessa DIV */
+    display: grid;
+    /*(GRID) grid diferente de display: flex, ela posibilita a criação de varios containeres,
+    ou permite lidar com colunas e linhas de varias formas, diferente de (flex) que posiciona ou 
+    um item de cada lado, ou em cima do outro, grid possibilita criar varias colunas e atribuindo
+    aos seus filhos a mesma regra*/
+    grid-template-columns: repeat(6, 1fr);
+    /*após criar um valor 'GRID' libera a propriedade (grid-template-columns:) que são colunas,
+    tipo blocos um de cada lado, ou podendo ser um em baixo de outro. a propriedade usada
+    (grid-template-columns:) está criando um coluna do lado da outra. a função ("REPEAT") é
+    usada para dizer que irá repetir a mesma coluna. Dentro dos seus parâmetros está colocado
+    os valores repeat("6, 1fr") o parâmetro "6" diz quantas colunas irá repetir, como são 6 
+    6 imagens irá repetir 6 vezes a measma coluna, o outro parâmetro "1fr" está dizendo que
+    irá fração de cada coluna ou bloco e colocando flexivél . Poderia colocar no lugar do
+    "1fr" o tamanho da imagem, porem usando a opção "1fr" ele irá deixar flexivel o tamanho
+    automatico, ou responsivo .  */
+    column-gap: 1.6rem;
+    /*column-gap é um espaços entre as colunas, ou os blocos aonde ficaram as imagens*/
+    margin: 16px 40px 0;
+    /*adicionando uma margem para no topo, e dos lados. A parte de baixo está "0" podendo 
+    colocar um espaço de margem em baixo também*/
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*PARTE DOS BOTÕES ONDE ESTÃO AS IMAGENS*/
+.images button img {
+   /*BOTÕES COM IMAGEM */
+   width: 100%;
+   /*largura das imagens, está em 100% então irá ocupar a largura de 100% dos blocos ou
+   colunas da GRID que está colocada na class="images"*/
+   height: 8.8rem;
+   /*altura da imagem no bloco, ou coluna da GRID*/
+   object-fit: cover;
+   /*(obejct-fit) é usada para ajustar a imagem na tela, ou na sua proporção, existe
+   varias propriedades para ajustar, a opção :contain irá conter imagem no seu tamanho original
+   sem distorção, a opção :cover irá ajustar a imagem, dano um zoom sem ter distoção para 
+   adeguar ao tamanho selecionado na img. */   
+}
