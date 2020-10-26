@@ -74,7 +74,8 @@ main h1 {
     animation-delay: 250ms;
 }
 .visit a:hover {
-    /*Efeito no Botão*/
+    /*criando um (hover em cima do botão), quando o mouse estiver ou passar
+    em cima dele haverá algum evento, ou animação*/
     background: #96feff; 
     /*está função está perguntando se o mouse está em cima dele(hover)*/
   }

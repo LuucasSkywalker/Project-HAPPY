@@ -74,7 +74,7 @@ aside.sidebar footer button {
 
 aside.sidebar footer button:hover {
     /*criando um (hover em cima do botão), quando o mouse estiver ou passar
-    em cima dele*/
+    em cima dele haverá algum evento, ou animação*/
     transition: background-color 200ms;
     /*(transition: background-color 200ms) diz que haverá uma transição de cor
     de fundo em 2 segundos, ou 200ms gerando suavidade na transição*/
@@ -85,7 +85,7 @@ aside.sidebar footer button:hover {
 .with-sidebar {
     /*criando uma class para dar espaçamento das imagens da barra lateral <aside-sidebar>
     da esquerda, chegando elas para direita. Foi criada a classe dentro do <main>*/
-    padding-left: 110px;
+    padding-left: 115px;
     /*colocando um espaço da esquerda de 100px*/
 }
 
@@ -100,13 +100,21 @@ aside.sidebar footer button:hover {
     /*colocando largura maxima de 70rem no corpo do <main> ou da class orphanage-details */
     margin: 6.4rem auto;
     /*colocando uma margina de altura, ou topo de 6.4rem e nas laterais deixando auto*/
-    background: #fdfbfb;
+    background: white;
     /*cor de fundo*/
-    border: 1px solid #d3e2e5 ;
+    border: 1px solid #dfe9e9 ;
     /*adicionando uma borda em torno do conteúdo <div class="orphanage-details">
     com 3 vaores border: largura de 1px, solida e cor  */
-    border-radius: 2rem;
+    border-radius: 1.4rem;
     /*adicionando bordas redondas na pagina details */
+    overflow: hidden;
+    /*IMPORTANTE: há imagens que pode ocorrer de mesmo colocado o tamanho certo, ou 
+    usando o 'object-fit: cover' a imagem pode transbordar e cobrir parte não 
+    selecionada. Ou vazar fora do pagina. Então usar a propriedade ("overflow: hidden")
+    para limitar e resolver esse problema de transbordar a imagem. Neste caso dentro
+    da imagem principal que fica no topo da pagina, não aceita o arrendondamento pois 
+    ela vazou fora do seu escopo. Então para conseguir aplicar o (border-radius:)
+    foi usado o (overflow: hidden) */
 }
 
 /*-----------------------------------------------------------------------------------*/
@@ -122,9 +130,9 @@ aside.sidebar footer button:hover {
     /*altura da imagem*/
     object-fit: cover;
     /*(obejct-fit) é usada para ajustar a imagem na tela, ou na sua proporção, existe
-    varias propriedades para ajustar, a opção :contain irá conter imagem no seu tamanho original
-    sem distorção, a opção :cover irá ajustar a imagem, dano um zoom sem ter distoção para 
-    adeguar ao tamanho selecionado na img. */
+    varias propriedades para ajustar, a opção :contain irá conter imagem no seu tamanho 
+    original sem distorção, a opção :cover irá ajustar a imagem, dano um zoom sem ter 
+    distorção para adeguar ao tamanho selecionado na img. */ 
 }
 
 .images {
@@ -153,17 +161,58 @@ aside.sidebar footer button:hover {
 }
 
 /*-----------------------------------------------------------------------------------*/
-/*PARTE DOS BOTÕES ONDE ESTÃO AS IMAGENS*/
+/*PARTE BOTÃO, E IMAGENS DENTRO DO BOTÃO*/
+.images button {
+    /*PROPRIEDADES DOS BOTÕES */
+    border: 0;
+    /*retirando toda as bordas padrão dos botões*/
+    background: none;
+    /*retirando cor de fundo dos botão*/
+    height: 8.8rem;
+    /*altura da botão no bloco, ou na coluna da GRID*/
+    cursor: pointer;
+    /*uma animação do cursor do mouse, ou a setinha do mouse quando para em cima
+    ele se torna uma mãozinha ao invés da setinha padrão*/ 
+    border-radius: 2rem;  
+    overflow: hidden;
+    /*IMPORTANTE: sempre que estiver um grid e em uma de suas colunas, ou blocos 
+    onde há imagens pode ocorrer de mesmo colocado o tamanho certo, ou usando o 
+    'object-fit: cover' a imagem pode transbordar e cobrir parte da imagem nivél 1. 
+    Ou vazar fora do bloco ou coluna. Então usar a propriedade ("overflow: hidden")
+    para limitar e resolver esse problema de transbordar a imagem. Neste caso dentro
+    do botão que está em uma GRID há 6 imagens e elas transbordaram o limite, e não
+    aceitava passar o arredondamento das bordas usando o (border-radius:), então foi
+    usado o (overflow: hidden) */
+    opacity: 0.6;
+    /*adicionando opacidade nas imagens do botão, deixando elas claras e sem nitidez*/
+    
+}
+
+.images button:hover {
+    /*criando um (hover em cima do botão), quando o mouse estiver ou passar
+    em cima dele haverá algum evento, ou animação. */
+    opacity: 1;
+    /*quando o mouse for colocado em cima do botão, que contem as imagens irá voltar
+    sua opacidade original, que é (1)*/
+    transition: opacity 200ms ;
+}
+.images button.active {
+    /*deixando um dos botões que coloquei uma (class="active") ativado com a opacidade 
+    original, fora da opacidade do evento do hover acima*/
+    opacity: 1;
+    /*opacidade normal*/
+}
+
 .images button img {
-   /*BOTÕES COM IMAGEM */
+   /*IMAGENS DENTRO DO BOTÃO */
    width: 100%;
    /*largura das imagens, está em 100% então irá ocupar a largura de 100% dos blocos ou
    colunas da GRID que está colocada na class="images"*/
    height: 8.8rem;
-   /*altura da imagem no bloco, ou coluna da GRID*/
+   /*altura da botão no bloco, ou na coluna da GRID*/
    object-fit: cover;
    /*(obejct-fit) é usada para ajustar a imagem na tela, ou na sua proporção, existe
-   varias propriedades para ajustar, a opção :contain irá conter imagem no seu tamanho original
-   sem distorção, a opção :cover irá ajustar a imagem, dano um zoom sem ter distoção para 
-   adeguar ao tamanho selecionado na img. */   
+   varias propriedades para ajustar, a opção :contain irá conter imagem no seu tamanho 
+   original sem distorção, a opção :cover irá ajustar a imagem, dano um zoom sem ter 
+   distorção para adeguar ao tamanho selecionado na img. */   
 }

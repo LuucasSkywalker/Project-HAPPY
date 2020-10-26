@@ -112,7 +112,7 @@ a.create-orphanage {
 }
 a.create-orphanage:hover {
     /*criando um (hover em cima do botão), quando o mouse estiver ou passar
-    em cima dele*/
+    em cima dele haverá algum evento, ou animação*/
     transition: background-color 200ms;
     /*(transition: background-color 200ms) diz que haverá uma transição de cor
     de fundo em 2 segundos, ou 200ms gerando suavidade na transição*/
